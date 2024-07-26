@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Agencia de Viajes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"> <!-- Agregar la clase "logo" aquí -->
+                <img src="logo.jpeg" alt="Logo"> <!-- Mantener la imagen del logo aquí -->
+            </div>
+            <ul class="links">
+                <li><a href="#banner">Inicio</a></li>
+                <li><a href="#destino">Destinos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#precios">Precios</a></li>
+            </ul>
+            <a href="#" class="action_btn">COMPRA YA</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="#banner">Inicio</a></li>
+            <li><a href="#destino">Destinos</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#precios" class="action_btn">COMPRA YA</a></li>
+        </div>
+    </header>
+
+
+
+    <section id="banner">
+        <div class="video-background">
+            <iframe
+                src="https://www.youtube.com/embed/a8d4v9YkIsw?autoplay=1&mute=1&controls=0&loop=1&playlist=a8d4v9YkIsw"
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="content">
+            <h1>Bienvenido a nuestra Agencia de Viajes</h1>
+            <a href="#destino" class="btn-reservar">Reservar Ahora</a>
+        </div>
+    </section>
+
+
+
+    <div id="destino" class="destino">
+        <div class="heading">
+            <h1>Destinos</h1>
+            <br>
+            <p>¡Explora nuestros increíbles destinos y reserva tu próxima aventura!</p>
+            <br>
+            <br>
+            <a href="#destino">Reserva Ahora</a>
+        </div>
+        <div class="tours">
+            <div class="places">
+                <h2>Italia</h2>
+                <img src="italia.jpeg" style="width: 300px; height: 250px; border-radius: 12px;">
+                <p>Descubre la belleza de Italia, desde las históricas calles de Roma hasta los impresionantes paisajes de la Toscana.</p>
+                <br>
+                <a href="#destino">Reservar</a>
+            </div>
+            <div class="places">
+                <h2>Nueva Zelanda</h2>
+                <img src="nueva-zelanda.jpeg" style="width: 300px; height: 250px; border-radius: 12px;">
+                <p>Embárcate en una aventura épica en Nueva Zelanda, explorando sus majestuosos fiordos y sus impresionantes paisajes.</p>
+                <br>
+                <a href="#destino">Reservar</a>
+            </div>
+            <div class="places">
+                <h2>Japón</h2>
+                <img src="japon.jpeg" style="width: 300px; height: 250px; border-radius: 12px;">
+                <p>Sumérgete en la cultura única de Japón, desde los bulliciosos mercados de Tokio hasta los serenos templos de Kioto.</p>
+                <br>
+                <a href="#destino">Reservar</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Sección de galería -->
+    <section id="galeria" class="galeria">
+
+        <div class="container-img">
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="/galeria/destino1.jpeg" alt="img-galeria">
+                    </figure>
+                </a>
+            </div>
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="/galeria/destino2.jpeg" alt="img-galeria">
+                    </figure>
+                </a>
+            </div>
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="/galeria/destino3.jpeg" alt="img-galeria">
+                    </figure>
+                </a>
+            </div>
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="/galeria/destino4.jpeg" alt="img-galeria">
+                    </figure>
+                </a>
+            </div>
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="/galeria/destino5.jpeg" alt="img-galeria">
+                    </figure>
+                </a>
+            </div>
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="/galeria/destino6.jpeg" alt="img-galeria">
+                    </figure>
+                </a>
+            </div>
+            <div class="box-img">
+                <a href="#">
+                    <figure>
+                        <img src="/galeria/destino7.jpeg" alt="img-galeria">
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Precios Section -->
+    <section id="precios" class="precios">
+        <div class="contenedor">
+            <div class="tabla">
+                <h2>Básico</h2>
+                <img src="icons/icon1.png" alt="">
+                <h3>100 <sup>$</sup></h3>
+                <p>Paga ahora y recibe un descuento</p>
+                <a href="" class="boton">Paga ahora</a>
+            </div>
+            <div class="tabla hover">
+                <h2>Estandar</h2>
+                <img src="icons/icon2.png" alt="">
+                <h3>200 <sup>$</sup></h3>
+                <p>Paga ahora y recibe un descuento</p>
+                <a href="" class="boton">Paga ahora</a>
+            </div>
+            <div class="tabla">
+                <h2>Premium</h2>
+                <img src="icons/icon3.png" alt="">
+                <h3>300 <sup>$</sup></h3>
+                <p>Paga ahora y recibe un descuento</p>
+                <a href="" class="boton">Paga ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure class="logo"> <!-- Agregar la clase "logo" aquí -->
+                    <a href="#">
+                        <img src="logo.jpeg" alt="Logo">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <ul>
+                    <li><a href="#banner">Inicio</a></li>
+                    <li><a href="#destino">Destinos</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#precios">Precios</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS:</h2>
+                <div class="red-social">
+                    <a href="#"><img src="redes/redes1.png" alt="Facebook"></a>
+                    <a href="#"><img src="redes/redes3.png" alt="Instagram"></a>
+                    <a href="#"><img src="redes/redes2.png" alt="Twitter"></a>
+                    <a href="#"><img src="redes/redes4.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024 <b></b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+    
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+
+
+</body>
+
+</html>
