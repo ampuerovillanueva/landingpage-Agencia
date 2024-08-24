@@ -86,7 +86,7 @@ a {
 }
 
 a:hover {
-    color: #78C0E0;
+    color: #192BC2;
 }
 
 .dropdown_menu {
@@ -160,30 +160,38 @@ a:hover {
 #banner {
     position: relative;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .video-background {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    z-index: -1;
+    width: 100%;
+    overflow: hidden;
 }
 
-.video-background iframe {
-    width: 100%;
-    height: 100%;
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
 }
 
 .content {
     position: relative;
-    text-align: center;
     z-index: 1;
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .content h1 {
@@ -203,7 +211,9 @@ a:hover {
 }
 
 .btn-reservar:hover {
-    background-color: #e05a4a;
+    background-color: #78C0E0;
+    transform: scale(1.05);
+    color: #fff
 }
 
 @media (max-width: 575px) {
@@ -220,197 +230,159 @@ a:hover {
 
 /* destinos */
 .destino {
-    width: 100%;
-    height: 90vh;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(img1.jpg);
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(img1.jpg);
     background-position: center;
     background-size: cover;
-}
-
-.heading {
-    width: 30%;
-    text-align: center;
     color: #fff;
 }
 
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .heading h1 {
-    font-size: 40px;
+    font-size: 3em;
+    margin: 0;
+}
+
+.heading p {
+    font-size: 1.2em;
+    margin: 10px 0;
 }
 
 .heading a {
+    display: inline-block;
     text-decoration: none;
-    color: #000;
-    font-size: 25px;
+    color: #fff;
+    background-color: #192BC2;
+    padding: 10px 30px;
+    border-radius: 25px;
     font-weight: bold;
-    border-radius: 45px;
-    padding: 14px 50px;
-    background-color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .heading a:hover {
-    letter-spacing: 3px;
-    transition: 0.6s;
+    background-color: #78C0E0;
+    transform: scale(1.05);
 }
 
 .tours {
-    width: 70%;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .places {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     border-radius: 12px;
-    width: 300px; /* Ancho fijo igual al ancho de la imagen */
-    margin: 20px; /* Margen entre los elementos */
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 300px;
+    max-width: 90%;
 }
 
 .places img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-bottom: 4px solid #192BC2;
 }
 
 .places h2 {
-    color: red;
-    font-size: 30px;
-    letter-spacing: 3px;
-    border-radius: 1px;
-    padding: 20px;
-    background-color: #78C0E0;
-    margin-top: 20px; /* Espacio entre la imagen y el título */
+    font-size: 1.8em;
+    color: white;
+    background-color: #192BC2;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
 }
 
 .places p {
-    color: #fff;
-    font-size: 16px;
-    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+    padding: 0 15px 15px;
 }
 
 .places a {
+    display: inline-block;
     text-decoration: none;
-    color: red;
+    color: #fff;
+    background-color: #192BC2;
+    padding: 10px 20px;
+    border-radius: 25px;
     font-weight: bold;
-    font-size: 18px;
-    border-radius: 12px;
-    padding: 12px 30px;
-    background-color: #fff;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .places a:hover {
-    background-color: #192BC2;
-    letter-spacing: 3px;
-    transition: 0.6s;
+    background-color: #78C0E0;
+    transform: scale(1.05);
 }
 
-
-/* Para dispositivos con una anchura máxima de 992px */
-@media screen and (max-width: 992px) {
-    .destino {
-        /* Agrega aquí los estilos específicos para pantallas de hasta 992px */
-        height: auto; /* Cambia la altura a automático */
-        flex-direction: column; /* Cambia la dirección del flujo a columna */
-        align-items: center; /* Centra los elementos horizontalmente */
-        padding: 30px 0; /* Añade un relleno superior e inferior */
+/* Responsive */
+@media (max-width: 768px) {
+    .heading h1 {
+        font-size: 2.5em;
     }
 
-    .heading {
-        /* Agrega aquí los estilos específicos para pantallas de hasta 992px */
-        width: 100%; /* Ajusta el ancho al 100% */
-        margin-bottom: 20px; /* Añade un margen inferior */
+    .heading p {
+        font-size: 1em;
     }
 
-    .tours {
-        /* Agrega aquí los estilos específicos para pantallas de hasta 992px */
-        width: 100%; /* Ajusta el ancho al 100% */
-    }
-
-    .places {
-        /* Agrega aquí los estilos específicos para pantallas de hasta 992px */
-        width: 100%; /* Ajusta el ancho al 100% */
-        margin-bottom: 20px; /* Añade un margen inferior */
+    .heading a {
+        padding: 8px 20px;
     }
 
     .places h2 {
-        color: red;
-        font-size: 30px;
-        letter-spacing: 3px;
-        border-radius: 1px;
-        padding: 20px;
-        background-color: #78C0E0;
-        width: 100%;
+        font-size: 1.5em;
     }
 
-    .places img {
-        /* Agrega aquí los estilos específicos para pantallas de hasta 992px */
-        width: 100%; /* Ajusta el ancho al 100% */
-        height: auto; /* Ajusta automáticamente la altura */
-        border-radius: 12px; /* Mantiene el radio de borde */
-        margin-bottom: 10px; /* Añade un margen inferior */
+    .places p {
+        font-size: 0.9em;
     }
 
     .places a {
-        /* Agrega aquí los estilos específicos para pantallas de hasta 992px */
-        font-size: 14px; /* Reduce el tamaño del texto */
-        padding: 8px 16px; /* Ajusta el relleno */
+        padding: 8px 15px;
     }
 }
 
-@media screen and (max-width: 575px) {
-    .destino {
-        flex-direction: column;
-        /* Cambiar la dirección del flujo en dispositivos móviles */
-        height: auto;
-        /* Ajustar la altura automáticamente en dispositivos móviles */
+@media (max-width: 480px) {
+    .heading h1 {
+        font-size: 2em;
     }
 
-    .heading {
-        width: 100%;
-        /* Ajustar el ancho del encabezado al 100% en dispositivos móviles */
-        text-align: center;
-        /* Centrar el texto en dispositivos móviles */
-        margin-bottom: 20px;
-        /* Añadir un margen inferior para separar el encabezado del contenido */
+    .heading p {
+        font-size: 0.9em;
     }
 
-    .tours {
-        width: 100%;
-        /* Ajustar el ancho de la sección de tours al 100% en dispositivos móviles */
-        flex-direction: column;
-        /* Cambiar la dirección del flujo en dispositivos móviles */
+    .heading a {
+        padding: 6px 15px;
     }
 
-    .places {
-        width: 100%;
-        /* Ajustar el ancho de cada lugar al 100% en dispositivos móviles */
-        margin-bottom: 20px;
-        /* Añadir un margen inferior para separar los lugares */
+    .places h2 {
+        font-size: 1.2em;
     }
 
-    
-    .places img {
-        width: 100%;
-        /* Ajustar el ancho de las imágenes al 100% en dispositivos móviles */
-        height: auto;
-        /* Ajustar automáticamente la altura de las imágenes en dispositivos móviles */
-        border-radius: 12px;
-        /* Mantener el radio de borde para las imágenes */
-        margin-bottom: 10px;
-        /* Añadir un margen inferior para separar las imágenes */
+    .places p {
+        font-size: 0.8em;
     }
 
     .places a {
-        font-size: 14px;
-        /* Reducir el tamaño del texto del enlace para dispositivos móviles */
-        padding: 8px 16px;
-        /* Ajustar el relleno del enlace para dispositivos móviles */
+        padding: 6px 10px;
     }
 }
-
 
 
 /* galeria */
@@ -471,31 +443,34 @@ a:hover {
 }
 
 /* Precios */
+/* Precios */
 .contenedor {
     width: 90%;
     max-width: 900px;
     margin: auto;
-    height: 100vh;
+    height: auto; /* Altura ajustada automáticamente según el contenido */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding-bottom: 60px; /* Espacio inferior para evitar superposición */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
 .tabla {
     width: 33%;
     height: 550px;
     margin: auto;
-    border: 1px solid #343759;
+    border: 1px solid #192BC2;
     border-radius: 4px;
-    box-shadow: 0px 0px 4px 0px #343759;
+    box-shadow: 0px 0px 4px 0px #192BC2;
     padding: 60px;
     text-align: center;
     flex-grow: 1;
-    color: #343759;
+    color: #192BC2;
 }
 
-.tabla>h2 {
+.tabla > h2 {
     font-size: 30px;
     margin-bottom: 35px;
 }
@@ -505,12 +480,12 @@ a:hover {
     margin-bottom: 35px;
 }
 
-.tabla>h3 {
+.tabla > h3 {
     font-size: 30px;
     margin-bottom: 20px;
 }
 
-.tabla>p {
+.tabla > p {
     display: block;
     margin-bottom: 20px;
 }
@@ -519,80 +494,58 @@ a:hover {
     display: inline-block;
     width: 150px;
     padding: 12px;
-    background: #449DD1;
+    background-color: #192BC2; /* Color de fondo normal del botón */
     text-decoration: none;
-    color: #fff;
+    color: white; /* Color del texto del botón */
     border-radius: 100px;
     text-align: center;
     font-size: 14px;
     font-weight: 600;
     margin: auto;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.boton:hover {
+    transform: scale(1.05);
 }
 
 .tabla:hover {
     background: #192BC2;
     color: #f1f1f2;
-    transition: .5s all;
+    transition: 0.5s all;
     transform: scale(1.1);
     cursor: pointer;
 }
 
-/* Estilos para dispositivos móviles en la sección de precios */
-/* Estilos para dispositivos móviles en la sección de precios */
-@media screen and (max-width: 575px) {
-    .precios .contenedor {
-        height: auto;
-        /* Ajustar la altura automáticamente en dispositivos móviles */
-        flex-direction: column;
-        /* Cambiar la dirección del flujo en dispositivos móviles */
-    }
+/* Cambiar el color del botón cuando el ratón está sobre la tabla */
+.tabla:hover .boton {
+    background-color: #78C0E0; /* Color de fondo cuando el ratón está sobre la tabla */
+    color: white; /* Color del texto cuando el ratón está sobre la tabla */
+}
 
+@media screen and (max-width: 1000px) {
     .tabla {
-        width: 100%;
-        /* Ajustar el ancho de las tablas al 100% en dispositivos móviles */
-        margin-bottom: 30px;
-        /* Añadir un margen inferior para separar las tablas */
+        width: 45%;
+        max-width: none;
+        margin-bottom: 40px;
+        flex-grow: initial;
     }
+}
 
-    .tabla:hover {
-        background: #78C0E0;
-        /* Cambiar el color de fondo al pasar el mouse en dispositivos móviles */
-        color: #f1f1f2;
-        /* Cambiar el color del texto al pasar el mouse en dispositivos móviles */
-        transition: .5s all;
-        transform: scale(1.1);
-        cursor: pointer;
+@media screen and (max-width: 700px) {
+    .tabla {
+        width: 45%;
+        padding: 30px;
     }
-
-    .tabla h2 {
-        font-size: 24px;
-        /* Reducir el tamaño del título de la tabla para dispositivos móviles */
+    .tabla > h2 {
+        margin-top: 40px;
     }
+}
 
-    .tabla img {
-        width: 80px;
-        /* Reducir el tamaño de las imágenes en dispositivos móviles */
-        margin-bottom: 20px;
-        /* Añadir un margen inferior para separar las imágenes */
-    }
-
-    .tabla h3 {
-        font-size: 20px;
-        /* Reducir el tamaño del subtitulo de la tabla para dispositivos móviles */
-    }
-
-    .tabla p {
-        font-size: 16px;
-        /* Reducir el tamaño del texto de la tabla para dispositivos móviles */
-        margin-bottom: 20px;
-        /* Añadir un margen inferior para separar los párrafos */
-    }
-
-    .boton {
-        font-size: 14px;
-        /* Reducir el tamaño del botón para dispositivos móviles */
-        padding: 10px 20px;
-        /* Ajustar el relleno del botón para dispositivos móviles */
+@media screen and (max-width: 550px) {
+    .tabla {
+        width: 85%;
+        padding: 20px;
     }
 }
 
@@ -642,7 +595,7 @@ a:hover {
 }
 
 .pie-pagina .grupo-1 .box ul li a:hover {
-    color: aqua; /* Cambiamos el color al pasar el cursor */
+    color: #192BC2; /* Cambiamos el color al pasar el cursor */
 }
 
 .pie-pagina .grupo-1 .box figure {
